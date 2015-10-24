@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/10/24 13:04:42 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/10/24 13:23:55 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,15 @@ typedef	union		u_func
 	int				(*f2)(int);
 }					t_func;
 
-typedef struct		s_case
+typedef struct		s_arg
 {
 	void			*content;
+	struct s_arg	*next;
+}					t_arg;
+
+typedef struct		s_case
+{
+	t_arg			*args;
 	struct s_case	*next;
 	size_t			content_size;
 }					t_case;
