@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/22 13:47:44 by vmonteco          #+#    #+#              #
-#    Updated: 2015/10/23 16:08:45 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/10/25 10:59:04 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -15,73 +15,73 @@ CFLAGS=-Wall -Werror -Wextra
 DEBUG=no
 
 LIBRARY=library
-SRC_FT=ft_atoi.c \
-ft_bzero.c \
-ft_isalnum.c \
-ft_isalpha.c \
-ft_isascii.c \
-ft_isdigit.c \
-ft_islower.c \
-ft_isprint.c \
-ft_isupper.c \
-ft_itoa.c \
-ft_memalloc.c \
-ft_memccpy.c \
-ft_memchr.c \
-ft_memcmp.c \
-ft_memcpy.c \
-ft_memdel.c \
-ft_memmove.c \
-ft_memset.c \
-ft_nullread.c \
-ft_putchar.c \
-ft_putchar_fd.c \
-ft_putendl.c \
-ft_putendl_fd.c \
-ft_putnbr.c \
-ft_putnbr_fd.c \
-ft_putpositive.c \
-ft_putpositive_fd.c \
-ft_putstr.c \
-ft_putstr_fd.c \
-ft_strcat.c \
-ft_strchr.c \
-ft_strclr.c \
-ft_strcmp.c \
-ft_strcpy.c \
-ft_strdel.c \
-ft_strdup.c \
-ft_strequ.c \
-ft_striter.c \
-ft_striteri.c \
-ft_strjoin.c \
-ft_strlcat.c \
-ft_strlen.c \
-ft_strmap.c \
-ft_strmapi.c \
-ft_strncat.c \
-ft_strncmp.c \
-ft_strncpy.c \
-ft_strnequ.c \
-ft_strnew.c \
-ft_strnstr.c \
-ft_strrchr.c \
-ft_strsplit.c \
-ft_strstr.c \
-ft_strsub.c \
-ft_strtrim.c \
-ft_tolower.c \
-ft_toupper.c \
-ft_absolute.c \
-ft_sign.c \
-ft_putnstr.c \
-ft_lstnew.c \
-ft_lstdelone.c \
-ft_lstdel.c \
-ft_lstadd.c \
-ft_lstiter.c \
-ft_lstmap.c \
-ft_itoa.c \
+SRC_FT=test_atoi.c \
+test_bzero.c \
+test_isalnum.c \
+test_isalpha.c \
+test_isascii.c \
+test_isdigit.c \
+test_islower.c \
+test_isprint.c \
+test_isupper.c \
+test_itoa.c \
+test_memalloc.c \
+test_memccpy.c \
+test_memchr.c \
+test_memcmp.c \
+test_memcpy.c \
+test_memdel.c \
+test_memmove.c \
+test_memset.c \
+test_nullread.c \
+test_putchar.c \
+test_putchar_fd.c \
+test_putendl.c \
+test_putendl_fd.c \
+test_putnbr.c \
+test_putnbr_fd.c \
+test_putpositive.c \
+test_putpositive_fd.c \
+test_putstr.c \
+test_putstr_fd.c \
+test_strcat.c \
+test_strchr.c \
+test_strclr.c \
+test_strcmp.c \
+test_strcpy.c \
+test_strdel.c \
+test_strdup.c \
+test_strequ.c \
+test_striter.c \
+test_striteri.c \
+test_strjoin.c \
+test_strlcat.c \
+test_strlen.c \
+test_strmap.c \
+test_strmapi.c \
+test_strncat.c \
+test_strncmp.c \
+test_strncpy.c \
+test_strnequ.c \
+test_strnew.c \
+test_strnstr.c \
+test_strrchr.c \
+test_strsplit.c \
+test_strstr.c \
+test_strsub.c \
+test_strtrim.c \
+test_tolower.c \
+test_toupper.c \
+test_absolute.c \
+test_sign.c \
+test_putnstr.c \
+test_lstnew.c \
+test_lstdelone.c \
+test_lstdel.c \
+test_lstadd.c \
+test_lstiter.c \
+test_lstmap.c \
+test_itoa.c \
 get_next_line.c
 
 DIR_FT=./src/
