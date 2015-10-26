@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 13:06:47 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/10/25 13:13:34 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/10/26 13:38:00 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "test.h"
 
 /*
-** This function should return the int value from a char * conversion.
+** This function should return the char * from its int value conversion.
 */
 
 static int		log(int arg1, char *res, char *res)

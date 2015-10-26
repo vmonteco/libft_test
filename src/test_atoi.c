@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/10/25 11:54:14 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/10/26 13:39:27 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 static int		log(char *arg1, int exp, int res)
 {
 	printf("ERROR: file %s.\nArgs : %s (char *).\nExpected : %d (int).\nGot : %\
-d.",
+d (int).",
 		   __file__, arg1, exp, res);
 	return (0);
 }
