@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/17 06:10:19 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/17 06:45:06 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -58,7 +58,7 @@ CLEAN=$(O_LIST) \
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(LIBTEST) $(LIBTOOLS)
-	$(CC) $(CFLAGS) -o $@ -I $(H_DIR) $(LIBFLAGS) $(MAIN)
+	$(CC) $(CFLAGS) $(MAIN) -o $@ -I $(H_DIR) $(LIBFLAGS)
 
 $(LIBTOOLS) : $(O_TOOLS_LIST)
 	ar rc $@ $(O_TOOLS_LIST)
