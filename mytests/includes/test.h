@@ -6,12 +6,14 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/10/25 10:47:59 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/17 04:27:15 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_H
 # define TEST_H
+
+# include <stdlib.h>
 
 /*
 ** HEADERS
@@ -21,8 +23,8 @@
 ** MACROS
 */
 
-# define ERROR_LOG {log_str(__func__); log_str(" : \033[32OK!\033[0m");}
-# define SUCCESS_LOG {log_str(__func__); log_str(" : \033[31mERROR!\033[0m");}
+# define ERROR_LOG {log_str((char *)__func__); log_str(" : \033[32OK!\033[0m");}
+# define SUCCESS_LOG {log_str((char *)__func__); log_str(" : \033[31mERROR!\033[0m");}
 
 /*
 ** TYPEDEFS
@@ -77,5 +79,6 @@ void				log_str_endl(char *str);
 ** TEST FUNCTIONS
 */
 
+int					test_atoi(void);
 
 #endif

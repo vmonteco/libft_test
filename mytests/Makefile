@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/16 17:54:14 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/17 06:10:19 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -15,7 +15,7 @@ NAME=test
 CC=gcc
 CFLAGS=-Wall -Werror -Wextra
 LIBFT_FLAGS=-L./ -lft
-LIBFLAGS=-L./ -lft -ltest
+LIBFLAGS=-L./ -ltest -ltools -lft
 
 MAIN=./main.c
 
@@ -34,23 +34,42 @@ LIBFT_DIR=libft
 LIBFT_H=get_next_line.h \
 	libft.h
 
+# Tools library variables
+TOOLS_DIR=./tools/
+SRC_TOOLS=log_char.c \
+	log_lst.c \
+	log_nbr.c \
+	log_positive.c \
+	log_str.c \
+	log_str_endl.c
+LIST_TOOLS=$(addprefix $(TOOLS_DIR),$(SRC_TOOLS))
+H_DIR=./includes/
+O_TOOLS_LIST=$(subst .c,.o,$(LIST_TOOLS))
+LIBTOOLS=libtools.a
+
 # Files to rm with a clean
 CLEAN=$(O_LIST) \
 	$(LIBFT) \
 	$(LIBTEST) \
+	$(LIBTOOLS) \
+	$(O_TOOLS_LIST) \
 	$(addprefix $(H_DIR),$(LIBFT_H))
 
 all : $(NAME)
 
-$(NAME) : $(LIBFT) $(LIBTEST)
-	$(CC) $(CFLAGS) -o $@ -I $(H_DIR) $(LIBFLAGS)
+$(NAME) : $(LIBFT) $(LIBTEST) $(LIBTOOLS)
+	$(CC) $(CFLAGS) -o $@ -I $(H_DIR) $(LIBFLAGS) $(MAIN)
+
+$(LIBTOOLS) : $(O_TOOLS_LIST)
+	ar rc $@ $(O_TOOLS_LIST)
+	ranlib $@
 
 $(LIBTEST) : $(O_LIST) $(LIBFT)
 	ar rc $@ $(O_LIST)
 	ranlib $@
 
 %.o : %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -I $(H_DIR) -o $@ -c $<
 
 $(LIBFT) :
 	git clone $(LIBFT_REPO) $(LIBFT_DIR)

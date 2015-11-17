@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/26 14:21:29 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/10/26 14:58:17 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/17 04:54:39 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void		log_lst_bis(t_list *lst, int n)
 	indent(n);
 	if (lst != NULL)
 	{
-		printf("Address : %x\n", lst);
+		printf("Address : %x\n", (unsigned int)lst);
 		indent(n);
 		printf("index : %d.\n", n);
 		indent(n);
