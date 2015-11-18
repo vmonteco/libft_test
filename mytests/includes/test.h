@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/17 04:27:15 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/18 17:10:28 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 ** MACROS
 */
 
-# define ERROR_LOG {log_str((char *)__func__); log_str(" : \033[32OK!\033[0m");}
-# define SUCCESS_LOG {log_str((char *)__func__); log_str(" : \033[31mERROR!\033[0m");}
+# define SUCCESS_LOG {log_str((char *)__func__); log_str(" : \033[32mOK!\033[0m");}
+# define ERROR_LOG {log_str((char *)__func__); log_str(" : \033[31mERROR!\033[0m");}
 
 /*
 ** TYPEDEFS

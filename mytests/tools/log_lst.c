@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/26 14:21:29 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/17 04:54:39 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/18 16:50:32 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void		log_lst_bis(t_list *lst, int n)
 		indent(n);
 		printf("index : %d.\n", n);
 		indent(n);
-		printf("Content size : %d (size_t)", (*lst).content_size);
+		printf("Content size : %d (size_t)", (int) (*lst).content_size);
 		indent(n);
 		content = strndup((*lst).content, (*lst).content_size);
 		printf("Content : %s (void * casted into a char *).\n",
