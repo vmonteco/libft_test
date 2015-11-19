@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/18 17:11:03 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/19 18:51:07 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +21,15 @@
 
 static int		log_error(char *arg1, int exp, int res)
 {
-	printf("ERROR: file %s.\nArgs : %s (char *).\nExpected : %d (int).\nGot : %\
-d (int).",
+	ERROR_LOG
+	printf("file %s.\nArgs : %s (char *).\nExpected : %d (int).\nGot :\
+ %d (int).\n",
 		   __FILE__, arg1, exp, res);
 	return (0);
 }
 
 static int		test_case(char *arg1)
-{
+ {
 	int		res;
 	int		exp;
 
@@ -43,11 +43,14 @@ static int		test_case(char *arg1)
 
 int			test_atoi(void)
 {
+	int		result;
+
+	NAME_LOG("ft_atoi()")
+	result = 1;
 	if (test_case("0") == 1)
 	{
 		SUCCESS_LOG
 		return (1);
 	}
-	ERROR_LOG
 	return (0);
 }

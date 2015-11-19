@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/17 06:45:06 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/19 18:44:41 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -29,7 +29,7 @@ LIBTEST=libtest.a
 
 # Libft variables.
 LIBFT=libft.a
-LIBFT_REPO=../../libft
+LIBFT_REPO=../libft
 LIBFT_DIR=libft
 LIBFT_H=get_next_line.h \
 	libft.h
@@ -72,6 +72,7 @@ $(LIBTEST) : $(O_LIST) $(LIBFT)
 	$(CC) $(CFLAGS) -I $(H_DIR) -o $@ -c $<
 
 $(LIBFT) :
+	rm -rf $(LIBFT_DIR)
 	git clone $(LIBFT_REPO) $(LIBFT_DIR)
 	make -C $(LIBFT_DIR)
 	cp $(LIBFT_DIR)/$@ ./
