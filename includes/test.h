@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/21 14:42:19 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/23 17:00:04 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@
 ; log_str("\033[0m : ");}
 # define SUCCESS_LOG {log_str_endl("\033[32mOK!\033[0m");}
 # define ERROR_LOG {log_str_endl("\033[31mERROR!\033[0m");}
+# define FORK_ERROR {log_str_endl("\033[31mERROR! Process failed to fork().\033\
+[0m");}
+# define SEGFAULT_ERROR {log_str("\033[31mERROR! Segfault.\033[0m");}
 
 /*
 ** TYPEDEFS
@@ -82,5 +85,6 @@ void				log_str_endl(char *str);
 */
 
 int					test_atoi(void);
+int					test_absolute(void);
 
 #endif
