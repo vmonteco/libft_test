@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/23 16:57:04 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/23 17:14:33 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,7 +31,7 @@ LIBTEST=libtest.a
 # Libft variables.
 LIBFT=libft.a
 LIBFT_REPO=../libft
-#LIBFT_REPO=https://github.com/vmonteco/libft.git
+LIBFT_REPO=https://github.com/vmonteco/libft.git
 LIBFT_DIR=libft
 LIBFT_H=get_next_line.h \
 	libft.h
