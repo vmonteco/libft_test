@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/19 18:51:07 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/21 15:06:31 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,20 @@ static int		test_case(char *arg1)
 
 int			test_atoi(void)
 {
-	int		result;
+	char	*cases[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+						"-1", "-10", "-2147483648", "2147483647", NULL};
+	int		i;
 
+	i = 0;
 	NAME_LOG("ft_atoi()")
-	result = 1;
-	if (test_case("0") == 1)
+	while (cases[i] != NULL)
 	{
-		SUCCESS_LOG
-		return (1);
+		if (test_case(cases[i]) != 1)
+			return (0);
+		i++;
 	}
-	return (0);
+	if (test_case(NULL) != 1)
+		return (0);
+	SUCCESS_LOG
+	return (1);
 }
