@@ -6,11 +6,11 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/23 17:14:33 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/23 17:17:41 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-NAME=test
+NAME=test_libft
 
 CC=gcc
 CFLAGS=-Wall -Werror -Wextra
@@ -90,3 +90,6 @@ fclean : clean
 	rm -f $(NAME)
 
 re: fclean clean all
+
+test: $(NAME)
+	./$(NAME)
