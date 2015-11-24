@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 03:09:11 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 04:26:29 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int		test_case(void *arg1, size_t n)
 		cpy2 = strndup(arg1, n);
 	}
 	pid = fork();
-	status = 0;
+	status = EXIT_FAILURE;
 	if (pid < 0)
 	{
 		FORK_ERROR
@@ -68,28 +68,56 @@ static int		test_case(void *arg1, size_t n)
 	{
 		ft_bzero(cpy1, n);
 		bzero(cpy2, n);
-		if (strncmp(cpy1, cpy2, n))
-				exit(EXIT_SUCCESS);
+		if (strncmp(cpy1, cpy2, n) == 0 || arg1 == NULL || n == 0)
+		{
+			free(cpy1);
+			free(cpy2);
+			exit(EXIT_SUCCESS);
+		}
 		log_error(arg1, n);
+		free(cpy1);
+		free(cpy2);
 		exit(EXIT_FAILURE);
 	}
+	free(cpy1);
+	free(cpy2);
 	return (!status);
+}
+
+char		*randstr(void)
+{
+	char	*str;
+	int		i;
+
+	str = (char *)malloc(sizeof(char) * 11);
+	i = 0;
+	while (i < 10)
+	{
+		str[i] = (char) rand();
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
 int			test_bzero(void)
 {
-	char	*cases[][2] = {{"1", "0"}, {"1", "2"}, {"1", "2"}};
+	char	*cases[][2] = {{NULL, "0"}, {"1", "0"}, {randstr(), "10"}, {"1111", "2"}};
 	int		i;
 
 	i = 0;
 	NAME_LOG("ft_atoi()")
-	while (cases[i] != NULL)
+	while ((unsigned long)i < sizeof(cases) / sizeof(cases[0]))
 	{
 		if (test_case((void *)cases[i][0], (size_t)atoi(cases[i][1]))
-			== EXIT_FAILURE)
+			== 0)
+		{
+			free(cases[2][0]);
 			return (0);
+		}
 		i++;
 	}
 	SUCCESS_LOG
+	free(cases[2][0]);
 	return (1);
 }

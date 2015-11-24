@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 00:18:51 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 03:28:23 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int		log_error(char *arg1, int exp, int res)
 }
 
 static int		test_case(char *arg1)
- {
+{
 	int		res;
 	int		exp;
 	pid_t	pid;
