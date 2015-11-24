@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 04:26:29 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 05:23:14 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int			test_bzero(void)
 	int		i;
 
 	i = 0;
-	NAME_LOG("ft_atoi()")
+	NAME_LOG("ft_bzero()")
 	while ((unsigned long)i < sizeof(cases) / sizeof(cases[0]))
 	{
 		if (test_case((void *)cases[i][0], (size_t)atoi(cases[i][1]))
