@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/23 17:00:04 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 01:25:31 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ void				log_str_endl(char *str);
 
 int					test_atoi(void);
 int					test_absolute(void);
+int					test_bzero(void);
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_absolute.c                                    :+:      :+:    :+:   */
+/*   test_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:52:40 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 00:26:11 by vmonteco         ###   ########.fr       */
+/*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
+/*   Updated: 2015/11/24 01:53:27 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,67 +17,76 @@
 #include "test.h"
 
 /*
-** This function should return the absolute value from an int input.
+** This function should write n zeroed bytes to the string the address is
+** passed as a argument.
 */
 
-static int		log_error(int arg1, int exp, int res)
+static int		log_error(char *str, size_t n)
 {
 	ERROR_LOG
-	printf("file %s.\nArgs : %d (int).\nExpected : %d (int).\nGot : %d (int).\n\
-",
-		   __FILE__, arg1, exp, res);
+	printf("file %s.\nArgs : %s (char *). %d (size_t).\n str weren't t\
+he same after the function call.\n",
+		   __FILE__, (char *)str, (int)n);
 	return (0);
 }
 
-static int		test_case(int arg1)
+static int		test_case(void *arg1, size_t n)
 {
-	int		res;
-	int		exp;
 	pid_t	pid;
 	int		status;
+	void	*cpy1;
+	void	*cpy2;
 	
+	if (arg1 == NULL)
+	{		
+		cpy1 = NULL;
+		cpy2 = NULL;
+	}
+	else
+	{
+		cpy1 = strndup(arg1, n);
+		cpy2 = strndup(arg1, n);
+	}
 	pid = fork();
 	status = 0;
 	if (pid < 0)
 	{
 		FORK_ERROR
+		free(cpy1);
+		free(cpy2);
 	}
 	else if (pid > 0)
 	{
 		wait(&status);
 		if (WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV)
 		{
-			printf(" - Case : %d ", arg1);
+			printf(" - Case : %s, %d ", (char *)arg1, (int) n);
 			SEGFAULT_ERROR
 		}
 	}
 	else if (pid == 0)
 	{
-		res = ft_absolute(arg1);
-		if (arg1 > 0)
-			exp = arg1;
-		else
-			exp = -arg1;
-		if (res == exp)
-			exit(EXIT_SUCCESS);
-		log_error(arg1, exp, res);
+		ft_bzero(cpy1, n);
+		bzero(cpy2, n);
+		if (strncmp(cpy1, cpy2, n))
+				exit(EXIT_SUCCESS);
+		log_error(arg1, n);
 		exit(EXIT_FAILURE);
 	}
 	return (!status);
 }
 
-int			test_absolute(void)
+int			test_atoi(void)
 {
-	char	*cases[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-						"-1", "-10", "-2147483648", "2147483647", NULL};
-	//char	*cases[] = {"0", NULL};
+	char	*cases[][2] = {{"1", "0"}, {"1", "2"}, {"1", "2"}};
 	int		i;
 
 	i = 0;
-	NAME_LOG("ft_absolute()")
+	NAME_LOG("ft_atoi()")
 	while (cases[i] != NULL)
 	{
-		if (test_case(atoi(cases[i])) != 1)
+		if (test_case((void *)cases[i][0], (size_t)atoi(cases[i][1]))
+			== EXIT_FAILURE)
 			return (0);
 		i++;
 	}

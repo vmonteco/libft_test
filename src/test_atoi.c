@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/23 16:49:41 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 00:18:51 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static int		test_case(char *arg1)
 	int		status;
 	
 	pid = fork();
+	status = 0;
 	if (pid < 0)
 	{
 		FORK_ERROR
@@ -57,13 +58,14 @@ static int		test_case(char *arg1)
 		{
 			exp = atoi(arg1);
 			if (res == exp)
-				return (1);
+				exit(EXIT_SUCCESS);
 		}
 		else
-			return (1);
+			exit(EXIT_SUCCESS);
 		log_error(arg1, exp, res);
+		exit(EXIT_FAILURE);
 	}
-	return (0);
+	return (!status);
 }
 
 int			test_atoi(void)
