@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 05:33:50 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 06:02:55 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ int					test_isdigit(void);
 int					test_islower(void);
 int					test_isprint(void);
 int					test_isupper(void);
+int					test_itoa(void);
 
 #endif

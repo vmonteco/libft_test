@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 05:28:34 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 06:12:48 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 #define TEST_ISLOWER
 #define TEST_ISPRINT
 #define TEST_ISUPPER
+#define TEST_ITOA
 
 int		main(void)
 {
@@ -54,6 +55,9 @@ int		main(void)
 #endif
 #ifdef TEST_ISUPPER
 	test_isupper();
+#endif
+#ifdef TEST_ITOA
+	test_itoa();
 #endif
 	return (0);
 }
