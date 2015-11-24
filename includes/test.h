@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 05:21:44 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 05:33:50 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,11 @@ int					test_atoi(void);
 int					test_absolute(void);
 int					test_bzero(void);
 int					test_isalnum(void);
+int					test_isascii(void);
+int					test_isalpha(void);
+int					test_isdigit(void);
+int					test_islower(void);
+int					test_isprint(void);
+int					test_isupper(void);
 
 #endif

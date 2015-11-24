@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 05:22:31 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 05:28:34 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 #define TEST_ABSOLUTE
 #define TEST_BZERO
 #define TEST_ISALNUM
+#define TEST_ISALPHA
+#define TEST_ISASCII
+#define TEST_ISDIGIT
+#define TEST_ISLOWER
+#define TEST_ISPRINT
+#define TEST_ISUPPER
 
 int		main(void)
 {
@@ -30,6 +36,24 @@ int		main(void)
 #endif
 #ifdef TEST_ISALNUM
 	test_isalnum();
+#endif
+#ifdef TEST_ISALPHA
+	test_isalpha();
+#endif
+#ifdef TEST_ISASCII
+	test_isascii();
+#endif
+#ifdef TEST_ISDIGIT
+	test_isdigit();
+#endif
+#ifdef TEST_ISLOWER
+	test_islower();
+#endif
+#ifdef TEST_ISPRINT
+	test_isprint();
+#endif
+#ifdef TEST_ISUPPER
+	test_isupper();
 #endif
 	return (0);
 }
