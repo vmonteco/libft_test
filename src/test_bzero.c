@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 01:53:27 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/24 03:09:11 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static int		test_case(void *arg1, size_t n)
 	return (!status);
 }
 
-int			test_atoi(void)
+int			test_bzero(void)
 {
 	char	*cases[][2] = {{"1", "0"}, {"1", "2"}, {"1", "2"}};
 	int		i;

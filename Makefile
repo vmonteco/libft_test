@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/24 01:26:25 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/24 02:30:43 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -62,6 +62,7 @@ all : $(NAME)
 
 $(NAME) : $(LIBFT) $(LIBTEST) $(LIBTOOLS)
 	$(CC) $(CFLAGS) $(MAIN) -o $@ -I $(H_DIR) $(LIBFLAGS)
+
 
 $(LIBTOOLS) : $(O_TOOLS_LIST)
 	ar rc $@ $(O_TOOLS_LIST)
