@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 05:15:18 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/26 03:34:26 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/26 04:37:10 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ static int		test_case(int arg1)
 	{
 		res = ft_isalnum(arg1);
 		exp = isalnum(arg1);
+#ifdef __linux__
+		if (!!res == !!exp)
+#endif
+#ifdef __APPLE__
 		if (res == exp)
+#endif
 			exit(EXIT_SUCCESS);
 		log_error(arg1, exp, res);
 		exit(EXIT_FAILURE);
@@ -62,10 +67,20 @@ static int		test_case(int arg1)
 int			test_isalnum(void)
 {
 	int	i;
+	int min;
+	int max;
 
-	i = -300;
+#ifdef __linux__
+	min = 0;
+	max = 255;
+#endif
+#ifdef __APPLE__
+	min = -300;
+	max = 300;
+#endif
+	i = min;
 	NAME_LOG("ft_isalnum()")
-	while (i < 300)
+	while (i < max)
 	{
 		if (test_case(i) != 1)
 			return (0);
