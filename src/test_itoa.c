@@ -6,14 +6,10 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/25 11:00:22 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 06:13:17 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/26 03:37:06 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include "libft.h"
 #include "test.h"
 
 /*

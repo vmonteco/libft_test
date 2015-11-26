@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/24 06:17:43 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/26 03:42:09 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 /*
 ** HEADERS
 */
+
+# ifdef __linux__
+#  include <stdio.h>
+#  include <sys/wait.h>
+#  include <unistd.h>
+#  include <ctype.h>
+#  include "libft.h"
+# endif
+# ifdef __APPLE__
+# endif
 
 /*
 ** MACROS
