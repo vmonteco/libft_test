@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/27 03:50:13 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/27 21:02:10 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -32,7 +32,8 @@ SRC_TEST=test_atoi.c \
 	test_isprint.c \
 	test_isupper.c \
 	test_itoa.c \
-	test_lstnew.c
+	test_lstnew.c \
+	test_lstadd.c
 LIST_TEST=$(addprefix $(SRC_DIR),$(SRC_TEST))
 H_DIR=./includes/
 O_LIST=$(subst .c,.o,$(LIST_TEST))
@@ -102,5 +103,5 @@ fclean : clean
 
 re: fclean clean all
 
-test: $(NAME)
+test: re
 	./$(NAME)

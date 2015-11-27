@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/27 02:11:26 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/27 19:56:23 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 #define TEST_ISUPPER
 #define TEST_ITOA
 #define TEST_LSTNEW
+#define TEST_LSTADD
 
 int		main(void)
 {

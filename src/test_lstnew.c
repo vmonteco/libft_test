@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 05:28:45 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/27 19:51:45 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/27 20:38:15 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ static int		is_ok(void *arg1, size_t arg2, t_list *elem)
 		return (0);
 	if (elem->content == NULL && arg1 == NULL && elem->content_size == 0)
 		return (1);
-	if (elem->content_size == arg2 && arg2 == 0 && elem->content == NULL)
+	if (elem->content_size == arg2 && arg2 == 0 && elem->content == NULL && elem->next == NULL)
 		return (1);
 	if (arg1 != NULL && elem->content == NULL)
 		return (0);
 	if (arg1 == NULL && elem->content != NULL)
 		return (0);
-	if (arg1 != NULL && elem->content != NULL && elem->content_size == arg2 && memcmp(arg1, elem->content, sizeof(*arg1)) == 0)
+	if (arg1 != NULL && elem->content != NULL && elem->content_size == arg2 && memcmp(arg1, elem->content, sizeof(*arg1)) == 0 && elem->next == NULL)
 		return (1);
 	return (0);
 }
