@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/26 03:48:52 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/27 03:50:13 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,8 +31,8 @@ SRC_TEST=test_atoi.c \
 	test_islower.c \
 	test_isprint.c \
 	test_isupper.c \
-	test_itoa.c
-#	test_lstadd.c
+	test_itoa.c \
+	test_lstnew.c
 LIST_TEST=$(addprefix $(SRC_DIR),$(SRC_TEST))
 H_DIR=./includes/
 O_LIST=$(subst .c,.o,$(LIST_TEST))
@@ -41,7 +41,7 @@ LIBTEST=libtest.a
 # Libft variables.
 LIBFT=libft.a
 LIBFT_REPO=../libft
-LIBFT_REPO=https://github.com/vmonteco/libft.git
+#LIBFT_REPO=https://github.com/vmonteco/libft.git
 LIBFT_DIR=libft
 LIBFT_H=get_next_line.h \
 	libft.h
