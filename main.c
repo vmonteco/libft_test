@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/27 19:56:23 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/29 22:29:47 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 #define TEST_ITOA
 #define TEST_LSTNEW
 #define TEST_LSTADD
+#define TEST_LSTDELONE
 
 int		main(void)
 {
@@ -67,6 +68,9 @@ int		main(void)
 #ifdef TEST_LSTADD
 	printf("/!\\ ft_lstadd() requires ft_lstnew(). /!\\\n");
 	test_lstadd();
+#endif
+#ifdef TEST_LSTDELONE
+	test_lstdelone();
 #endif
 	return (0);
 }
