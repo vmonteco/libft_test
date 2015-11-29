@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/29 22:29:47 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/29 22:46:42 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 #define TEST_LSTNEW
 #define TEST_LSTADD
 #define TEST_LSTDELONE
+#define TEST_LSTDEL
 
 int		main(void)
 {
@@ -71,6 +72,10 @@ int		main(void)
 #endif
 #ifdef TEST_LSTDELONE
 	test_lstdelone();
+#endif
+#ifdef TEST_LSTDEL
+	printf("/!\\ ft_lstdel() requires ft_lstdelone.  /!\\\n");
+	test_lstdel();
 #endif
 	return (0);
 }

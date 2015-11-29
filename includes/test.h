@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/29 22:30:05 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/29 22:47:35 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,6 @@ int					test_itoa(void);
 int					test_lstadd(void);
 int					test_lstnew(void);
 int					test_lstdelone(void);
+int					test_lstdel(void);
 
 #endif
