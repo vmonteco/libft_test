@@ -6,11 +6,13 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 05:11:27 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/30 05:55:35 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+#define DEP
 
 #define TEST_ATOI
 #define TEST_ABSOLUTE
@@ -28,7 +30,7 @@
 #define TEST_LSTDELONE
 #define TEST_LSTDEL
 #define TEST_LSTMAP
-#define DEP
+#define TEST_MEMALLOC
 
 int		main(void)
 {
@@ -119,6 +121,9 @@ int		main(void)
 # ifdef DEP
 # endif
 	test_lstmap();
+#endif
+#ifdef TEST_MEMALLOC
+	test_memalloc();
 #endif
 	return (0);
 }
