@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 05:55:35 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/30 06:35:19 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 #define TEST_LSTDEL
 #define TEST_LSTMAP
 #define TEST_MEMALLOC
+#define TEST_MEMDEL
 
 int		main(void)
 {
@@ -124,6 +125,9 @@ int		main(void)
 #endif
 #ifdef TEST_MEMALLOC
 	test_memalloc();
+#endif
+#ifdef TEST_MEMDEL
+	test_memdel();
 #endif
 	return (0);
 }
