@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 01:49:52 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/11/30 05:07:41 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,6 @@ int					test_lstnew(void);
 int					test_lstdelone(void);
 int					test_lstdel(void);
 int					test_lstmap(void);
+int					test_lstiter(void);
 
 #endif
