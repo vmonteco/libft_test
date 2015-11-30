@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/11/29 22:46:55 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/11/30 01:50:23 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -35,7 +35,8 @@ SRC_TEST=test_atoi.c \
 	test_lstnew.c \
 	test_lstadd.c \
 	test_lstdelone.c \
-	test_lstdel.c
+	test_lstdel.c \
+	test_lstmap.c
 LIST_TEST=$(addprefix $(SRC_DIR),$(SRC_TEST))
 H_DIR=./includes/
 O_LIST=$(subst .c,.o,$(LIST_TEST))
