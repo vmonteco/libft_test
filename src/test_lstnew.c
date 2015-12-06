@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 05:28:45 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/27 20:38:15 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/06 17:17:03 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int		log_error(void *arg1, size_t arg2, t_list *elem)
 	ERROR_LOG
 	printf("file %s.\n", __FILE__);
 	printf("Content : %s.\n", (arg1 == NULL ? "Null" : (char *)arg1));
-	printf("Content_size : %d.\n", arg2);
+	printf("Content_size : %d.\n", (int)arg2);
 	if (elem == NULL)
 		printf("Result : NULL.\n");
 	else
@@ -29,7 +29,7 @@ static int		log_error(void *arg1, size_t arg2, t_list *elem)
 		printf("Result : Not null.\n");
 		printf("Result->content : %s.\n",
 			   elem->content == NULL ? "Null" : (char *)elem->content);
-		printf("Result->content_size : %d.\n", elem->content_size);
+		printf("Result->content_size : %d.\n", (int)elem->content_size);
 	}
 	return (0);
 }
@@ -69,7 +69,7 @@ static int		test_case(void *arg1, size_t arg2)
 		if (WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV)
 		{
 			printf(" - Case : content : %s, content_size : %d.\n",
-				   arg1 == NULL ? "(NULL)" : (char *)arg1, arg2);
+				   arg1 == NULL ? "(NULL)" : (char *)arg1, (int)arg2);
 			SEGFAULT_ERROR
 		}
 	}

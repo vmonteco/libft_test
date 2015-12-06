@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 06:35:49 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/06 17:18:29 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int		test_case(size_t size)
 		wait(&status);
 		if (WIFSIGNALED(status))
 		{
-			printf(" - Case : size == %d ", size);
+			printf(" - Case : size == %d ", (int)size);
 			if (WTERMSIG(status) == SIGSEGV)
 				SEGFAULT_ERROR
 			else

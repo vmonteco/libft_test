@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 06:34:51 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/06 16:25:35 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@
 #  include "libft.h"
 # endif
 # ifdef __APPLE__
+#  include <stdio.h>
+#  include <unistd.h>
+#  include <ctype.h>
+#  include "libft.h"
 # endif
 
 /*

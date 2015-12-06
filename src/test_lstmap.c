@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 05:28:45 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 03:28:50 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/06 17:17:33 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static int		log_error(t_list *lst1, t_list *(*f)(t_list *elem), t_list *lst2)
 			   get_elem(lst1, i) != get_elem(lst2, i)
 			   ? "Yes" : "No");
 		printf("content_size1 : %d\t\t\t| content_size2 : %d\n",
-			   (get_elem(lst1, i)->content_size),
-			   (get_elem(lst2, i))->content_size);
+			   (int)(get_elem(lst1, i)->content_size),
+			   (int)(get_elem(lst2, i))->content_size);
 		printf("content_size1\t\t\t\t== content_size2?\t%s\n",
 			   (get_elem(lst1, i))->content_size
 			   == (get_elem(lst2, i))->content_size

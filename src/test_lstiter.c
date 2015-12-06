@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 05:28:45 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/11/30 05:33:59 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/06 17:17:53 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int		log_error(t_list *lst, void (*f)(t_list *elem))
 		printf("elem %i : %s\n", i,
 			   get_elem(lst, i) == NULL ? "NULL\t" : "Not NULL");
 		printf("content_size = %d\n",
-			   (get_elem(lst, i)->content_size));
+			   (int)(get_elem(lst, i)->content_size));
 		printf("content_size == sizeof(0)?%s\n",
 			   (get_elem(lst, i))->content_size
 			   == sizeof(0) ? "Yes" : "No");
