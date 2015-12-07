@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/17 04:22:52 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/12/07 18:12:25 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/07 18:26:01 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 #define TEST_MEMCPY
 #define TEST_MEMCCPY
 #define TEST_MEMCHR
+#define TEST_MEMCMP
 
 int		main(void)
 {
@@ -140,6 +141,9 @@ int		main(void)
 #endif
 #ifdef TEST_MEMCHR
 	test_memchr();
+#endif	
+#ifdef TEST_MEMCMP
+	test_memcmp();
 #endif
 	return (0);
 }

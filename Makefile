@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/12/07 18:09:38 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/12/07 18:25:16 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -42,7 +42,8 @@ SRC_TEST=test_atoi.c \
 	test_memdel.c \
 	test_memcpy.c \
 	test_memccpy.c \
-	test_memchr.c
+	test_memchr.c \
+	test_memcmp.c
 LIST_TEST=$(addprefix $(SRC_DIR),$(SRC_TEST))
 H_DIR=./includes/
 O_LIST=$(subst .c,.o,$(LIST_TEST))

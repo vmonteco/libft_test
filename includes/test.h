@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 10:57:03 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/12/07 18:10:07 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/07 18:25:26 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,5 +120,6 @@ int					test_memdel(void);
 int					test_memcpy(void);
 int					test_memccpy(void);
 int					test_memchr(void);
+int					test_memcmp(void);
 
 #endif
