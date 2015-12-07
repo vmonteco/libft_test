@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/12/07 17:30:22 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/07 18:08:27 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int		log_error(void *s1, const void *s2, size_t n, void *cpy1, void *cpy2
 	ERROR_LOG
 	i = 0;
 	printf("file %s.\ns1 : %s (void *)\ns2 : %s (void *)\nn : %d (size_t)\n\
-cpy1 : %s\ncpy2 %s.\ncpy1 == cpy2 ? %s\n",
+cpy1 : %s\ncpy2 : %s.\ncpy1 == cpy2 ? %s\n",
 		   __FILE__,
 		   s1 == NULL ? "NULL" : "Not NULL",
 		   s2 == NULL ? "NULL" : "Not NULL",

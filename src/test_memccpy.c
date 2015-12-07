@@ -6,7 +6,7 @@
 /*   By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 00:40:28 by vmonteco          #+#    #+#             */
-/*   Updated: 2015/12/07 17:38:06 by vmonteco         ###   ########.fr       */
+/*   Updated: 2015/12/07 18:08:16 by vmonteco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int		log_error(void *s1, const void *s2, int c, size_t n, void *cpy1, voi
 	ERROR_LOG
 	i = 0;
 	printf("file %s.\ns1 : %s (void *)\ns2 : %s (void *)\nc : %c\nn : %d (size_t)\n\
-cpy1 : %s\ncpy2 %s.\ncpy1 == cpy2 ? %s\n",
+cpy1 : %s\ncpy2 : %s.\ncpy1 == cpy2 ? %s\n",
 		   __FILE__,
 		   s1 == NULL ? "NULL" : "Not NULL",
 		   s2 == NULL ? "NULL" : "Not NULL",
@@ -89,9 +89,9 @@ static int		test_case(void *s1, const void *s2, int c, size_t n)
 
 int			test_memccpy(void)
 {
-	void	*cases_s1[] = {"aaaaa", "aaaaa", "aaaaa", "aaaaa", "aaaaa", "", "", "", NULL};
-	void	*cases_s2[] = {"bbbbb", "bbbbb", "bbbbb", "bbbbb", "bbbbb", "", "bb", "bb", NULL};
-	int		cases_c[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'};
+	void	*cases_s1[] = {"aaaaa", "aaaaa", "aaaaa", "aaaaa", "aaaaa", "aaaaac" , "", "", "", NULL};
+	void	*cases_s2[] = {"bbbbb", "bbbbb", "bbbbb", "bbbbb", "bbbbb", "bbbcbb", "", "bb", "bb", NULL};
+	int		cases_c[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'};
 	size_t	cases_n[] = {0, 2, 5, 6, 7, 2, 2, 0, 0};
 	int		i;
 
