@@ -6,7 +6,7 @@
 #    By: vmonteco <vmonteco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/16 14:33:54 by vmonteco          #+#    #+#              #
-#    Updated: 2015/12/07 18:25:16 by vmonteco         ###   ########.fr        #
+#    Updated: 2015/12/17 12:04:54 by vmonteco         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -97,7 +97,7 @@ $(LIBTEST) : $(O_LIST) $(LIBFT)
 
 $(LIBFT) :
 	rm -rf $(LIBFT_DIR)
-	git clone $(LIBFT_REPO) $(LIBFT_DIR)
+	git clone -b withoutsegv $(LIBFT_REPO) $(LIBFT_DIR)
 	make -C $(LIBFT_DIR)
 	cp $(LIBFT_DIR)/$@ ./
 	cp $(LIBFT_DIR)/includes/libft.h $(H_DIR)
